@@ -44,8 +44,8 @@ let videoHeight = 300;
 let faceDetection = null;
 let illustration = null;
 let canvasScope;
-let canvasWidth = 800;
-let canvasHeight = 800;
+let canvasWidth = 400;
+let canvasHeight = 400;
 
 // ML models
 let facemesh;
@@ -57,7 +57,7 @@ let nmsRadius = 30.0;
 // Misc
 let mobile = false;
 const stats = new Stats();
-const avatarSvgs = {
+let avatarSvgs = {
   'girl': girlSVG.default,
   'boy': boySVG.default,
   'abstract': abstractSVG.default,
@@ -126,7 +126,7 @@ function setupGui(cameras) {
     guiState.camera = cameras[0].deviceId;
   }
 
-  const gui = new dat.GUI({width: 300});
+  const gui = new dat.GUI({width: 10});
 
   let multi = gui.addFolder('Image');
   gui.add(guiState, 'avatarSVG', Object.keys(avatarSvgs)).onChange(() => parseSVG(avatarSvgs[guiState.avatarSVG]));
@@ -164,6 +164,16 @@ function detectPoseInRealTime(video) {
   async function poseDetectionFrame() {
     // Begin monitoring code for frames per second
     stats.begin();
+
+
+avatarSvgs = {
+  'girl': girlSVG.default,
+  'boy': boySVG.default,
+  'abstract': document.getElementById('myInputSVG').value,
+  'blathers': blathersSVG.default,
+  'tom-nook': tomNookSVG.default,
+};
+
 
     let poses = [];
    
@@ -252,6 +262,9 @@ function setupCanvas() {
   canvas.height = canvasHeight;
   canvasScope.setup(canvas);
 }
+
+
+
 
 /**
  * Kicks off the demo by loading the posenet model, finding and loading
