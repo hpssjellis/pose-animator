@@ -6,6 +6,14 @@ Run on Gitpod (Needs github login)
 https://gitpod.io/#github.com/hpssjellis/pose-animator
 
 
+running demo at
+
+
+https://github.com/hpssjellis/zoom-cartoon-svg
+
+
+
+
 
 
 
