@@ -126,7 +126,7 @@ function setupGui(cameras) {
     guiState.camera = cameras[0].deviceId;
   }
 
-  const gui = new dat.GUI({width: 10});
+  const gui = new dat.GUI({width: 100});
 
   let multi = gui.addFolder('Image');
   gui.add(guiState, 'avatarSVG', Object.keys(avatarSvgs)).onChange(() => parseSVG(avatarSvgs[guiState.avatarSVG]));
