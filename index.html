@@ -24,7 +24,7 @@
             transform: scale(0.5, 0.5);
             transform-origin: 0 0;
             left: 10px;
-            top: 10px;
+            top: 600px;
         }
 
         #main {
@@ -119,27 +119,33 @@
     <div class="canvas-container">
         <canvas class="illustration-canvas"></cavnas>
         <br><br><br><br><br><br><br><br><br>
-        <div id='main' style='display:none'>
+        <div id='main' style='display:block'>
             <video id="video" playsinline style=" -moz-transform: scaleX(-1);
             -o-transform: scaleX(-1);
             -webkit-transform: scaleX(-1);
             transform: scaleX(-1);
-            display: none;
+            display: block;
             ">
             </video>
-            <canvas id="output" class="camera-canvas"></canvas>
-            <canvas id="keypoints" class="camera-canvas"></canvas>
         </div>
 
     </div>
-    <div class="footer">
+
+
+
+      <br><br><br><br><br><br>
+
+    <div class="footer2">
         <div class="footer-text">
           <p> <input type=text id="myInputSVG" size= 400 value="https://hpssjellis.github.io/test-pose-cartoon/public/svg/boy.svg" >
           <div id="myDiv02">...</div>
               <h6 align=center>Original Github <a href="https://github.com/yemount/pose-animator">https://github.com/yemount/pose-animator</a></h6>
           </p>
         </div>
-      </div>
+    </div>
+
+    <canvas id="output" class="camera-canvas"></canvas>
+    <canvas id="keypoints" class="camera-canvas"></canvas>
     <script src="camera.js"></script>
 </body>
 
