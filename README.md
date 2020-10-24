@@ -1,3 +1,14 @@
+
+By Rocksetta updated for ubuntu Oct 23 rd 2020
+
+Run on Gitpod (Needs github login)
+
+https://gitpod.io/#github.com/hpssjellis/pose-animator
+
+
+
+
+
 # Pose Animator
 
 Pose Animator takes a 2D vector illustration and animates its containing curves in real-time based on the recognition result from PoseNet and FaceMesh. It borrows the idea of skeleton-based animation from computer graphics and applies it to vector characters.
